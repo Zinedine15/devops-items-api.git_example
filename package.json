@@ -1,0 +1,32 @@
+{
+  "name": "devops-items-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Micro-API REST con Express, PostgreSQL, Docker Compose y CI.",
+  "main": "dist/src/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/src/server.js",
+    "lint": "tsc --noEmit",
+    "test": "npm run build && node --test dist/tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "dotenv": "16.6.1",
+    "express": "5.1.0",
+    "helmet": "8.1.0",
+    "pg": "8.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "22.15.30",
+    "@types/pg": "8.15.4",
+    "@types/supertest": "6.0.3",
+    "supertest": "7.1.1",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  }
+}
